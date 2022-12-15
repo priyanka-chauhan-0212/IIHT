@@ -1,0 +1,12 @@
+Principal Amount is 1000.000000
+Rate of Interest is 2.000000
+Number of years is 3.000000
+----------------------------
+Simple Interest is 60.000000
+
+Principal Amount is 5000.000000
+Rate of Interest is 2.000000
+Number of years is 1.000000
+----------------------------
+Simple Interest is 100.000000
+

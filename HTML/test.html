@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .test {
+        background-color: yellow;
+    }
+    
+    .relative {
+        position: relative;
+        height: 800px;
+        width: 800px;
+    }
+    
+    .relative img {
+        position: absolute;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .relative video {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+    }
+</style>
+
+<body style="font-size:20px;height:1500px">
+
+    <h1>The onscroll Event</h1>
+
+    <div class="relative" id="testDiv">
+        <video autoplay loop muted>
+            <source src="assets/media/mov_bbb.mp4" type="video/mp4">
+          </video>
+        <img src="https://images.unsplash.com/photo-1659782682835-bf57d0f0bee4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" height="100%" width="100%" />
+    </div>
+
+
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            if (document.documentElement.scrollTop > 100) {
+                document.getElementById("testDiv").style.height = "700px";
+                document.getElementById("testDiv").style.width = "700px";
+            } else if (document.documentElement.scrollTop > 50) {
+                document.getElementById("testDiv").style.height = "500px";
+                document.getElementById("testDiv").style.width = "500px";
+            } else {
+                document.getElementById("testDiv").style.height = "200px";
+                document.getElementById("testDiv").style.width = "200px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

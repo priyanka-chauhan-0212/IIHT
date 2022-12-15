@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <!-- <button id="redBtn">Red</button>
+      <button id="blueBtn">Blue</button>
+      <button id="greenBtn">Green</button> -->
+      <button themeColor="red" class="theme-btn">Red</button>
+      <button themeColor="blue" class="theme-btn">Blue</button>
+      <button themeColor="green" class="theme-btn">Green</button>
+      <button themeColor="yellow" class="theme-btn">Yellow</button>
+      <button themeColor="orange" class="theme-btn">Orange</button>
+    </section>
+    <section>
+      <h1 class="theme-text">Heading</h1>
+      <p class="theme-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque autem
+        assumenda hic non id voluptatem, consequatur amet explicabo totam esse
+        in blanditiis iste magnam molestias ab iure similique at natus.
+      </p>
+    </section>
+    <section>
+      <h1 class="theme-text">Heading</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque autem
+        assumenda hic non id voluptatem, consequatur amet explicabo totam esse
+        in blanditiis iste magnam molestias ab iure similique at natus.
+      </p>
+    </section>
+    <section>
+      <h1>Heading</h1>
+      <p class="theme-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque autem
+        assumenda hic non id voluptatem, consequatur amet explicabo totam esse
+        in blanditiis iste magnam molestias ab iure similique at natus.
+      </p>
+    </section>
+
+    <script>
+      //   var redBtn = document.getElementById("redBtn");
+      //   var blueBtn = document.getElementById("blueBtn");
+      //   var greenBtn = document.getElementById("greenBtn");
+
+      //   var elements = document.getElementsByClassName("theme-text");
+
+      //   idividual functions
+      //   redBtn.onclick = themeRed;
+      //   greenBtn.onclick = themeGreen;
+      //   blueBtn.onclick = themeBlue;
+
+      //   function themeRed() {
+      //     for (let i = 0; i < elements.length; i++) {
+      //       elements[i].style.color = "red";
+      //     }
+      //   }
+      //   function themeGreen() {
+      //     for (let i = 0; i < elements.length; i++) {
+      //       elements[i].style.color = "green";
+      //     }
+      //   }
+      //   function themeBlue() {
+      //     for (let i = 0; i < elements.length; i++) {
+      //       elements[i].style.color = "blue";
+      //     }
+      //   }
+
+      //   redBtn.onclick = function () {
+      //     themeChanger("red");
+      //   };
+      //   blueBtn.onclick = function () {
+      //     themeChanger("blue");
+      //   };
+      //   greenBtn.onclick = function () {
+      //     themeChanger("green");
+      //   };
+
+      var buttons = document.getElementsByClassName("theme-btn");
+      var elements = document.getElementsByClassName("theme-text");
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function () {
+          themeChanger(buttons[i].getAttribute("themeColor"));
+        };
+      }
+
+      function themeChanger(themeColor) {
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].style.color = themeColor;
+        }
+      }
+    </script>
+  </body>
+</html>

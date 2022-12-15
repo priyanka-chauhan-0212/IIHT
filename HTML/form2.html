@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form method="get">
+        <table>
+            <tr>
+                <th>
+                    <label for="fname">FirstName</label>
+                </th>
+                <td>
+                    <input type="text" id="fname" name="fName" autofocus autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="uname">UserName</label>
+                </th>
+                <td>
+                    <input type="text" id="uname" name="city" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="lname">LastName</label>
+                </th>
+                <td>
+                    <input type="text" id="lname" name="lName" value="Soni" readonly>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">Email</label>
+                </th>
+                <td>
+                    <input type="email" id="email" name="email" disabled value="a@a.com">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="pass">Password</label>
+                </th>
+                <td>
+                    <input type="password" id="pass" name="pass" size="10" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" placeholder="Enter password">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="age">Age</label>
+                </th>
+                <td>
+                    <input type="number" id="age" name="age" min="18" max="60" placeholder="Enter age" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="date">Date</label>
+                </th>
+                <td>
+                    <input type="date" id="date" name="date" min="2022-08-01" max="2022-08-25">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="time">Time</label>
+                </th>
+                <td>
+                    <input type="time" id="time" name="time" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="dateTime">Date Time</label>
+                </th>
+                <td>
+                    <input type="datetime-local" id="dateTime" name="dateTime">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="month">Month</label>
+                </th>
+                <td>
+                    <input type="month" id="month" name="month">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="week">Week</label>
+                </th>
+                <td>
+                    <input type="week" id="week" name="week">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="color">Color</label>
+                </th>
+                <td>
+                    <input type="color" id="color" name="color">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="file">File</label>
+                </th>
+                <td>
+                    <input type="file" id="file" name="file" multiple required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="hidden">Hidden</label>
+                </th>
+                <td>
+                    <input type="hidden" id="hidden" name="hidden" value="Done">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="range">Range</label>
+                </th>
+                <td>
+                    <input type="range" id="range" name="range" min="10" max="60" step="10">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="search">Search</label>
+                </th>
+                <td>
+                    <input type="search" id="search" name="search">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="url">Url</label>
+                </th>
+                <td>
+                    <input type="url" id="url" name="url">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Gender</label>
+                </th>
+                <td>
+                    <input type="radio" name="gender" id="male" value="M">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="F">
+                    <label for="female">FeMale</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Hobby</label>
+                </th>
+                <td>
+                    <input type="checkbox" name="hobby" id="code" value="code">
+                    <label for="code">Coding</label>
+                    <input type="checkbox" name="hobby" id="read" value="read">
+                    <label for="read">Reading</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="comment">Comment</label>
+                </th>
+                <td>
+                    <textarea name="comment" id="comment" cols="30" rows="10">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="country">Country</label>
+                </th>
+                <td>
+                    <select name="country" id="country" multiple>
+                        <option value="IND">India</option>
+                        <option value="AUS">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Browsers</label>
+                </th>
+                <td>
+                    <input list="browsers">
+                    <datalist id="browsers">
+                      <option value="Internet Explorer">
+                      <option value="Firefox">
+                      <option value="Chrome">
+                      <option value="Opera">
+                      <option value="Safari">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <!-- <input type="button" value="Click"> -->
+                    <input type="submit" value="SEND">
+                    <input type="reset" value="Reset">
+                    <!-- <button>Test</button> -->
+                </th>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+
+</html>

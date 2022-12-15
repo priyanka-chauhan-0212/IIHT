@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=sa, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script>
+      //   var myWindow = window.open(
+      //     "https://www.iihtsrt.com",
+      //     "",
+      //     "width=200,height=100"
+      //   );
+
+      //   myWindow.moveTo(500, 100);
+      //   myWindow.resizeTo(500, 700);
+
+      //   myWindow.close();
+
+      //   console.log("screen.width " + screen.width);
+      //   console.log("window.innerWidth " + window.innerWidth);
+      //   console.log("screen.height " + screen.height);
+      //   console.log("screen.availWidth " + screen.availWidth);
+      //   console.log("screen.availHeight " + screen.availHeight);
+      //   console.log("screen.pixelDepth " + screen.pixelDepth);
+      //   console.log("screen.colorDepth " + screen.colorDepth);
+
+      //   console.log(window.location.href);
+      //   console.log(window.location.protocol);
+      //   console.log(window.location.hostname);
+      //   console.log(window.location.pathname);
+
+      // setInterval(function () {
+      //   window.location.reload();
+      // }, 3000);
+
+      // alert("Hello World");
+
+      // if (confirm("Press a button!")) {
+      //   document.write("You pressed OK!");
+      // } else {
+      //   document.write("You pressed Cancel!");
+      // }
+
+      // let person = prompt("Please enter your name");
+      // let text;
+      // if (person == null || person == "") {
+      //   text = "User cancelled the prompt.";
+      // } else {
+      //   text = "Hello " + person + "! How are you today?";
+      // }
+
+      // document.write(text);
+
+      // setTimeout(() => {
+      //   document.write(new Date());
+      // }, 10000);
+
+      setInterval(() => {
+        document.getElementById("div").innerHTML = new Date();
+      }, 1000);
+    </script>
+  </body>
+</html>

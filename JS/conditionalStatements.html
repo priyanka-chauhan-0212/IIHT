@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var mathsMarks = 75; // 0 - 100  valid
+      //   /*
+      //   100 - 75  A
+      //   75 - 55   B
+      //   55 - 35   Pass
+      //   Fail
+
+      //   */
+
+      //   if (mathsMarks >= 0 && mathsMarks <= 100) {
+      //     //Grading system
+      //     if (mathsMarks > 75) {
+      //       document.write("A");
+      //     } else if (mathsMarks > 55) {
+      //       document.write("B");
+      //     } else if (mathsMarks > 35) {
+      //       document.write("Pass");
+      //     } else {
+      //       document.write("Fail");
+      //     }
+      //   } else {
+      //     document.write("Invalid Marks");
+      //   }
+
+      var inr = 100,
+        choice = 1;
+
+      switch (choice) {
+        case 1:
+          document.write(inr + " rs = " + 100 / 78 + " USD"); // 100 rs = 1.3 USD
+          break;
+        case 2:
+          document.write(inr + " rs = " + 100 / 85 + " GBP");
+          break;
+        case 3:
+          document.write(inr + " rs = " + 100 * 1.3 + " RUB");
+          break;
+        default:
+          document.write("Invalid Input");
+      }
+    </script>
+  </body>
+</html>

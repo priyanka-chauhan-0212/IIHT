@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm">
+      <input type="text" id="name" name="name" placeholder="name" /><br />
+      <input type="text" id="gender" name="gender" placeholder="gender" /><br />
+      <input type="text" id="runs" name="runs" placeholder="runs" /><br />
+      <input
+        type="text"
+        id="wickets"
+        name="wickets"
+        placeholder="wickets"
+      /><br />
+      <input
+        type="text"
+        id="teamName"
+        name="teamName"
+        placeholder="teamName"
+      /><br />
+      <input type="submit" value="Save" />
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        var cricketerList = [];
+        // $.ajax({
+        //   url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblCricketer",
+        //   method: "GET",
+        // }).then(function (data) {
+        //   cricketerList = data;
+        //   console.log(cricketerList);
+        // });
+
+        // function cricketer(name, gender, runs, wickets, teamName) {
+        //   this.name = name;
+        //   this.gender = gender;
+        //   this.runs = runs;
+        //   this.wickets = wickets;
+        //   this.teamName = teamName;
+        // }
+
+        // $("#frm").submit(function () {
+        //   event.preventDefault();
+        //   let name = $("#name").val();
+        //   let gender = $("#gender").val();
+        //   let runs = $("#runs").val();
+        //   let wickets = $("#wickets").val();
+        //   let teamName = $("#teamName").val();
+
+        //   let player = new cricketer(name, gender, runs, wickets, teamName);
+        //   //   let playerJSON = JSON.stringify(player);
+        //   $.ajax({
+        //     url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblCricketer",
+        //     method: "POST",
+        //     data: player,
+        //   }).then(function (data) {
+        //     console.log(data);
+        //   });
+        // });
+      });
+    </script>
+  </body>
+</html>

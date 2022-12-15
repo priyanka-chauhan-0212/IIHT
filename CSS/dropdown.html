@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .dropdown-menu>ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(182, 174, 174);
+        }
+
+        .dropdown-menu>ul>li>a{
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+        }
+
+        .dropdown-menu{
+            position: absolute;
+            display: none;
+            z-index: 2;
+            min-width: max-content;
+            box-shadow: 5px 5px 6px 0px rgb(51 49 49 / 70%);
+        }
+
+        .dropdown:hover>.dropdown-menu{
+            display: block;
+        }
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="p-1">
+        <div class="dropdown">
+            <button>Hover Me</button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li>
+                        <a href="#!">Link 1 - first link</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nulla, quas fuga nemo accusamus dolores eligendi quisquam incidunt ab eaque non distinctio itaque fugiat dignissimos commodi vero atque porro odio.
+        </p>
+    </section>
+</body>
+</html>

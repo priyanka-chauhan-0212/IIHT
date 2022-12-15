@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // my_age
+      // MyAge
+      // myage
+      // myAge
+      //background-red
+
+      class Person {
+        constructor(name = "", age = 0, id = 0) {
+          this.name = name;
+          this.age = age;
+          this.id = id;
+        }
+
+        setName(name) {
+          this.name = name;
+        }
+
+        getName() {
+          return this.name;
+        }
+
+        setAge(age) {
+          this.age = age;
+        }
+
+        getAge() {
+          return this.age;
+        }
+        setId(id) {
+          this.id = id;
+        }
+
+        getId() {
+          return this.id;
+        }
+      }
+
+      class Student extends Person {
+        constructor(name, age, id, rollNo) {
+          super(name, age, id);
+          this.rollNo = rollNo;
+        }
+
+        setRollNo(rollNo) {
+          this.rollNo = rollNo;
+        }
+
+        getRollNo() {
+          return this.rollNo;
+        }
+      }
+
+      class Teacher extends Person{
+        constructor(name, age, id, salary) {
+          super(name, age, id);
+          this.salary = salary;
+        }
+
+        setSalary(salary) {
+          this.salary = salary;
+        }
+
+        getSalary() {
+          return this.salary;
+        }
+      }
+
+      // let p1 = new Person("Jay");
+      // console.log(p1)
+      // p1.setAge(26);
+      // p1.setId(101);
+      // console.log(p1)
+
+      let s1 = new Student("Akshay", 26, 102, 57);
+      let t1 = new Teacher("Sumit",28,105,66)
+      s1.setAge(27)
+
+      console.log(s1)
+      console.log(t1)
+
+    </script>
+  </body>
+</html>

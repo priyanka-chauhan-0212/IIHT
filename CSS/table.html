@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .table{
+            border-bottom: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th,
+        .table td{
+            border-bottom: 1px solid black;
+            text-align: center;
+            /* line-height: 2; */
+            padding: 10px;
+        }
+
+        .table>thead>tr{
+            background-color: teal;
+        }
+
+        .table>tbody>tr:nth-child(even){
+            background-color: ghostwhite;
+        }
+
+        .table>tbody>tr:hover{
+            background-color: rgb(148, 142, 142);
+        }
+    </style>
+</head>
+<body>
+    <section class="p-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>ABC</td>
+                    <td>26</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ABC</td>
+                    <td>26</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ABC</td>
+                    <td>26</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ABC</td>
+                    <td>26</td>
+                    <td>123456789</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+ 
+</body>
+</html>

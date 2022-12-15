@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #d1,
+      #p1 {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id
+      autem repellendus dicta, vel alias cumque iste.
+      <p id="p1">This is para</p>
+    </div>
+    <script>
+      var d1 = document.getElementById("d1");
+      var p1 = document.getElementById("p1");
+
+      p1.addEventListener(
+        "click",
+        function () {
+          event.stopPropagation();
+          changeColor(p1);
+        },
+        true
+      );
+
+      d1.addEventListener(
+        "click",
+        function () {
+          changeColor(d1);
+        },
+        false
+      );
+
+      function changeColor(x) {
+        x.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

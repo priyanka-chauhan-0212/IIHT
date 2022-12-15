@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-red {
+        color: tomato;
+      }
+      .text-green {
+        color: teal;
+      }
+      .text-blue {
+        color: dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button themeChanger="text-red">Red</button>
+    <button themeChanger="text-green">Green</button>
+    <button themeChanger="text-blue">Blue</button>
+    <h1 theme>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+      adipisci voluptate nam? Hic illo doloremque amet inventore, similique
+      deserunt omnis quae accusantium quas? Aut eveniet ad esse est nobis
+      incidunt.
+    </p>
+    <h1 theme>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+      adipisci voluptate nam? Hic illo doloremque amet inventore, similique
+      deserunt omnis quae accusantium quas? Aut eveniet ad esse est nobis
+      incidunt.
+    </p>
+    <h1>Heading</h1>
+    <p theme>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+      adipisci voluptate nam? Hic illo doloremque amet inventore, similique
+      deserunt omnis quae accusantium quas? Aut eveniet ad esse est nobis
+      incidunt.
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script>
+      $(function () {
+        redBtn = $("#red");
+        greenBtn = $("#green");
+        blueBtn = $("#blue");
+
+        redBtn.on("click", function () {
+          $("h1").removeClass("text-blue text-green");
+          $("h1").addClass("text-red");
+        });
+
+        greenBtn.on("click", function () {
+          $("h1").addClass("text-green");
+        });
+      });
+    </script> -->
+    <script>
+      $(function () {
+        $("button[themeChanger]").click(function () {
+          let colorClass = $(this).attr("themeChanger");
+          $("[theme]")
+            .removeClass("text-red text-green text-blue")
+            .addClass(colorClass);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="orignalData"></div>
+
+    <div id="newData"></div>
+
+    <script>
+      var numbers = [45, 9, 23, 12, 6];
+
+      let htmlText = "<h1>Original Data</h1>";
+
+      numbers.forEach(function (value) {
+        htmlText += "<p>" + value + "</p>";
+      });
+
+      document.getElementById("orignalData").innerHTML = htmlText;
+
+      // var newNumbers = numbers.map(function (value) {
+      // //  if(value>20){
+      // //   return value + (value/10);
+      // //  }
+      // //  else{
+      // //   return value + (value * 2/10);
+      // //  }
+
+      // return value>20 ? value + (value/10) : value + (value*2/10)
+      // });
+
+
+      var newNumbers = numbers.map(value => value>20 ? value + (value/10) : value + (value*2/10));
+      
+      let newhtmlText = "<h1>New Data</h1>";
+
+      newNumbers.forEach(function (value) {
+        newhtmlText += "<p>" + value + "</p>";
+      });
+
+      document.getElementById("newData").innerHTML = newhtmlText;
+    </script>
+  </body>
+</html>

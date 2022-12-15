@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm">
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="firstName"
+      /><br />
+      <input
+        type="text"
+        id="country"
+        name="country"
+        placeholder="country"
+      /><br />
+      <input type="text" id="phone" name="phone" placeholder="phone" /><br />
+      <input type="submit" value="Save" />
+    </form>
+
+    <form id="editFrm">
+      <input
+        type="text"
+        id="editID"
+        name="id"
+        placeholder="ID"
+        readonly
+      /><br />
+      <input
+        type="text"
+        id="editFirstName"
+        name="firstName"
+        placeholder="firstName"
+      /><br />
+      <input
+        type="text"
+        id="editCountry"
+        name="country"
+        placeholder="country"
+      /><br />
+      <input
+        type="text"
+        id="editPhone"
+        name="phone"
+        placeholder="phone"
+      /><br />
+      <input type="submit" value="Save" />
+    </form>
+
+    <table>
+      <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        var userList = [];
+        var findUserId = 14;
+
+        // Get All
+        $.ajax({
+          url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser",
+          method: "GET",
+        }).then(function (data) {
+          userList = data;
+          console.log(userList);
+
+          userList.forEach((user) => {
+            addToHtml(user);
+          });
+        });
+
+        // Get One
+        // $.ajax({
+        //   url:
+        //     "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" + findUserId,
+        //   method: "GET",
+        // }).then(function (data) {
+        //   userList = data;
+        //   console.log(userList);
+
+        //   $("#firstName").val(userList.firstName);
+        //   $("#country").val(userList.country);
+        //   $("#phone").val(userList.phone);
+        // });
+
+        function User(firstName, country, phone) {
+          this.firstName = firstName;
+          this.country = country;
+          this.phone = phone;
+        }
+
+        $("#frm").submit(function () {
+          event.preventDefault();
+          let firstName = $("#firstName").val();
+          let country = $("#country").val();
+          let phone = $("#phone").val();
+
+          let user = new User(firstName, country, phone);
+          //POST -> insert user
+          $.ajax({
+            url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser",
+            method: "POST",
+            data: user,
+          }).then(function (data) {
+            console.log(data);
+            addToHtml(data);
+          });
+
+          $("#firstName").val("");
+          $("#country").val("");
+          $("#phone").val("");
+        });
+
+        $("#editFrm").submit(function () {
+          event.preventDefault();
+          let firstName = $("#editFirstName").val();
+          let country = $("#editCountry").val();
+          let phone = $("#editPhone").val();
+
+          let user = new User(firstName, country, phone);
+          user.id = $("#editID").val();
+          //PUT -> insert user
+          $.ajax({
+            url:
+              "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" + user.id,
+            method: "PUT",
+            data: user,
+          }).then(function (data) {
+            console.log(data);
+          });
+
+          $("#editID").val("");
+          $("#editFirstName").val("");
+          $("#editCountry").val("");
+          $("#editPhone").val("");
+        });
+
+        // $.ajax({
+        //   url:
+        //     "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" + findUserId,
+        //   method: "DELETE",
+        // }).then(function (data) {
+        //   console.log(data);
+        // });
+
+        function addToHtml(user) {
+          let tr = $("<tr></tr>");
+          tr.append($("<td></td>").html(user.id));
+          tr.append($("<td></td>").html(user.firstName));
+          tr.append($("<td></td>").html(user.country));
+          tr.append($("<td></td>").html(user.phone));
+
+          let editBtn = $("<button></button>").html("Edit");
+          let deleteBtn = $("<button></button>").html("Delete");
+
+          // editBtn.attr("editUserId", user.id);
+          // deleteBtn.attr("deleteUserId", user.id);
+
+          editBtn.click(function () {
+            $("#editID").val(user.id);
+            $("#editFirstName").val(user.firstName);
+            $("#editCountry").val(user.country);
+            $("#editPhone").val(user.phone);
+          });
+
+          deleteBtn.click(function () {
+            $.ajax({
+              url:
+                "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" +
+                user.id,
+              method: "DELETE",
+            }).then(function (data) {
+              console.log(data);
+              $(deleteBtn).parent().parent().remove();
+            });
+          });
+
+          let actionTd = $("<td></td>");
+          actionTd.append(editBtn);
+          actionTd.append(deleteBtn);
+
+          tr.append(actionTd);
+
+          $("#tbody").append(tr);
+        }
+      });
+    </script>
+  </body>
+</html>

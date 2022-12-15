@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="alert">
+        <h1>Heading 3</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sint
+          vitae architecto harum atque id temporibus, alias obcaecati porro,
+          soluta voluptatibus ea nostrum. Cumque officia incidunt cum iusto.
+          Mollitia, earum?
+        </p>
+        <button>Close</button>
+      </div>
+
+      <div class="alert">
+        <h1>Heading 1</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sint
+          vitae architecto harum atque id temporibus, alias obcaecati porro,
+          soluta voluptatibus ea nostrum. Cumque officia incidunt cum iusto.
+          Mollitia, earum?
+        </p>
+        <button>Close</button>
+      </div>
+      <div class="alert">
+        <h1>Heading 2</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sint
+          vitae architecto harum atque id temporibus, alias obcaecati porro,
+          soluta voluptatibus ea nostrum. Cumque officia incidunt cum iusto.
+          Mollitia, earum?
+        </p>
+        <button>Close</button>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".alert>button").click(function () {
+          $(this).parent().remove();
+        });
+      });
+    </script>
+  </body>
+</html>

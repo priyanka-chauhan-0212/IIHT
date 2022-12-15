@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let inr = 100;
+      // let option = 2;
+
+      // switch(option){
+      // case 1:
+      //     //call a function to convert inr to USD and print the answer
+
+      // }
+
+      //with param with return
+      //   function addition(x, y) {
+      //     let ans;
+      //     ans = x + y;
+      //     return ans;
+      //   }
+
+      // const addition = function(x,y){
+      //     return x + y;
+      // }
+
+      addition = (x, y) => x + y;
+
+      const simpleInterest = (p, r, n) => {
+        console.log();
+      };
+
+      //with param without return
+      function subtraction(x, y) {
+        let ans;
+        ans = x - y;
+        document.write("Subtraction is " + ans + "<br>");
+      }
+
+      //without param with return
+      function multiplication() {
+        let x = 7,
+          y = 6;
+        return x * y;
+      }
+
+      //without param without return
+      function division() {
+        let x = 7,
+          y = 6;
+        document.write("Division is " + x / y + "<br>");
+      }
+
+      // let answer = addition(5,6);
+      document.write("Addition is " + addition(5, 6) + "<br>");
+      subtraction(7, 5);
+      document.write("Multiplication is " + multiplication() + "<br>");
+      division();
+    </script>
+  </body>
+</html>

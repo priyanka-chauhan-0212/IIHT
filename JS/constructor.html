@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        let tbody = document.getElementById('tbody');
+        let personList = [],htmlText = '';
+
+      function Person(fName, lName, age = 0, id = 0) {
+        this.fName = fName;
+        this.lName = lName;
+        this.age = age;
+        this.id = id;
+        // this.fullName = function(){
+        //     return this.fName + ' ' + this.lName
+        // }
+        this.fullName = () => this.fName + ' ' + this.lName;
+      }
+
+
+
+    //   let person1 = new Person("Akshay", "Soni", 26, 101);
+    //   let person2 = new Person("Akshay", "Soni");
+
+    //   personList.push(person1);
+    //   personList.push(person2);
+
+      // console.log(person1['fName'] + ' ' + person1.lName);
+      // console.log(person2['fName'] + ' ' + person2.lName);
+
+      //   console.log(person1)
+      //   console.log(person2)
+
+
+      personList.push(new Person("Akshay", "Soni", 26, 101))
+      personList.push(new Person("Deep", "Sharma", 26, 102))
+      personList.push(new Person("Jay", "Mehta"))
+
+    //   console.log(personList);
+
+      personList.forEach( person => {
+        htmlText += '<tr>';
+        htmlText += '<td>' + person.id + '</td>';
+        htmlText += '<td>' + person.fullName() + '</td>';
+        htmlText += '<td>' + person.age + '</td>';
+        htmlText += '</tr>';
+      });
+
+      tbody.innerHTML = htmlText
+
+      personList[0].bloodGroup = 'O+';
+
+      console.log(personList)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+
+    <script>
+        // let d = new Date();
+        // let d = new Date(00, 10, 24, 10, 33, 30);
+        // let d = new Date(30, 10, 24, 10, 33);
+        // let d = new Date(30, 10, 24, 10);
+        // let d = new Date(30, 10, 24);
+        // let d = new Date(30, 10);
+        // let d = new Date("October 13, 2014 11:13:00");
+        // let d = new Date(1664246672498);
+        let d = new Date(0);
+
+        let h1 = document.getElementById('demo');
+
+        // h1.innerText = d.toString();
+        // h1.innerText = d.toDateString();
+        // h1.innerText = d.toLocaleDateString();
+        // h1.innerText = d.toISOString();
+        // h1.innerText = d.toLocaleString();
+        h1.innerText = d.toUTCString();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead id="tHead"></thead>
+      <tbody id="tBody"></tbody>
+    </table>
+
+    <script>
+      htmlText = "";
+      let person = {
+        name: "Akshay",
+        age: 26,
+        subject: "Java",
+      };
+
+      htmlText = "<tr>";
+
+      for (const key in person) {
+        htmlText += "<th>" + key + "</th>";
+      }
+      htmlText += "</tr>";
+      document.getElementById("tHead").innerHTML = htmlText;
+
+
+      htmlText = "<tr>";
+
+      for (const key in person) {
+        htmlText += "<td>" + person[key] + "</td>"; // person["name"]
+      }
+      htmlText += "</tr>";
+      document.getElementById("tBody").innerHTML = htmlText;
+    </script>
+  </body>
+</html>

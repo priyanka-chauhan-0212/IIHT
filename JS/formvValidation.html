@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm">
+      <input
+        type="text"
+        placeholder="Enter name"
+        id="fullName"
+        name="fullName"
+      />
+      <p>*mandatory</p>
+      <br />
+      <input type="email" placeholder="Enter email" id="email" name="email" />
+      <p>*mandatory</p>
+      <br />
+      <input
+        type="password"
+        placeholder="Enter password"
+        id="password"
+        name="password"
+      />
+      <p>*mandatory</p>
+      <br />
+      <input type="submit" />
+    </form>
+    <script>
+      var frm = document.getElementById("frm");
+      var fullName = document.getElementById("fullName");
+      var isFullNameValid = false;
+      var isEmailValid = false;
+      var isPasswordValid = false;
+      var email = document.getElementById("email");
+      var password = document.getElementById("password");
+      frm.onsubmit = validate;
+
+      function validate() {
+        console.log(isFullNameValid);
+        console.log(isEmailValid);
+        console.log(isPasswordValid);
+        return isFullNameValid && isEmailValid && isPasswordValid;
+      }
+
+      // function fullNameValidator() {
+      //   if (fullName.value == "") {
+      //     return false;
+      //   } else {
+      //     if (fullName.value == "Akshay") {
+      //       return true;
+      //     } else {
+      //       return false;
+      //     }
+      //   }
+      // }
+
+      // function emailValidator() {
+      //   if (email.value == "") {
+      //     return false;
+      //   } else {
+      //     if (
+      //       email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+      //     ) {
+      //       return true;
+      //     } else {
+      //       return false;
+      //     }
+      //   }
+      // }
+
+      function checkInput(element, regex) {
+        if (element.value == "") {
+          element.nextElementSibling.innerText = "*mandatory";
+          return false;
+        } else {
+          if (element.value.match(regex)) {
+            element.nextElementSibling.innerText = "valid";
+            return true;
+          } else {
+            element.nextElementSibling.innerText = "Invalid";
+            return false;
+          }
+        }
+      }
+
+      fullName.addEventListener("keyup", function () {
+        isFullNameValid = checkInput(fullName, /([A-Z])\w+/);
+      });
+
+      email.addEventListener("keyup", function () {
+        isEmailValid = checkInput(
+          email,
+          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        );
+      });
+
+      password.addEventListener("keyup", function () {
+        isPasswordValid = checkInput(
+          password,
+          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+          // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Toggler</button>
+    <p id="p1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ut
+      hic fugit expedita qui reprehenderit error sunt libero dolorum et ad,
+      doloribus impedit doloremque placeat incidunt ullam eligendi tempora eos.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ut
+      hic fugit expedita qui reprehenderit error sunt libero dolorum et ad,
+      doloribus impedit doloremque placeat incidunt ullam eligendi tempora eos.
+    </p>
+
+    <script>
+      var btn = document.getElementById("btn");
+      var p1 = document.getElementById("p1");
+
+      //   btn.addEventListener("click", togglePara);
+
+      //   function togglePara() {
+      //     p1.style.display = p1.style.display == "none" ? "block" : "none";
+      //   }
+
+      var togglePara = () =>
+        (p1.style.display = p1.style.display == "none" ? "block" : "none");
+
+      btn.addEventListener("click", togglePara);
+
+      btn.removeEventListener("click", togglePara);
+
+      btn.addEventListener(
+        "click",
+        () => (p1.style.color = p1.style.color == "red" ? "blue" : "red")
+      );
+
+      btn.addEventListener("mouseenter", () => {
+        btn.innerHTML = "Mouse is inside the button";
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.innerHTML = "Mouse has left the button";
+      });
+    </script>
+  </body>
+</html>

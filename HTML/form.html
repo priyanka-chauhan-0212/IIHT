@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form novalidate>
+
+        <table>
+            <tr>
+                <th>
+                    <label for="fName">First Name :</label>
+                </th>
+                <td>
+                    <input type="text" name="fName" id="fName" value="Akshay" readonly>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="lName">Last Name :</label>
+                </th>
+                <td>
+                    <input type="text" name="lName" id="lName" value="Soni" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">Email :</label>
+                </th>
+                <td>
+                    <input type="email" name="email" id="email" size="10" placeholder="Enter email" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="pass">Password :</label>
+                </th>
+                <td>
+                    <input type="password" name="pass" id="pass" maxlength="8" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="dob">Date :</label>
+                </th>
+                <td>
+                    <input type="date" name="dob" id="dob" min="2022-08-16" max="2022-08-31">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="color">Color :</label>
+                </th>
+                <td>
+                    <input type="color" name="color" id="color">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="month">Month :</label>
+                </th>
+                <td>
+                    <input type="month" name="month" id="month">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="week">Week :</label>
+                </th>
+                <td>
+                    <input type="week" name="week" id="week">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Gender :</label>
+                </th>
+                <td>
+                    <input type="radio" name="gender" id="M" value="M">
+                    <label for="M">Male</label>
+                    <input type="radio" name="gender" id="F" value="F">
+                    <label for="F">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Hobbies :</label>
+                </th>
+                <td>
+                    <input type="checkbox" name="hobby" id="coding" value="coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" name="hobby" id="reading" value="reading">
+                    <label for="reading">Reading</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="time">Time :</label>
+                </th>
+                <td>
+                    <input type="time" name="time" id="time">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="file">Documents :</label>
+                </th>
+                <td>
+                    <input type="file" name="file" id="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="hidden">HIDDEN :</label>
+                </th>
+                <td>
+                    <input type="hidden" name="hidden" id="hidden">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="age">Age :</label>
+                </th>
+                <td>
+                    <input type="number" name="age" id="age" min="18" max="60" step="2">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="range">Range :</label>
+                </th>
+                <td>
+                    <input type="range" name="range" id="range" min="10" max="60" step="10">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="search">Search :</label>
+                </th>
+                <td>
+                    <input type="search" name="search" id="search">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="tel">Tel :</label>
+                </th>
+                <td>
+                    <input type="tel" name="tel" id="tel" pattern="^[0-9]{9}$">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="comment">Comment :</label>
+                </th>
+                <td>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="city">City</label>
+                </th>
+                <td>
+                    <select name="city" id="city" multiple>
+                        <option value="SRT">Surat</option>
+                        <option value="BOM">Mumbai</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="country">Country</label>
+                </th>
+                <td>
+                    <input list="countries" name="country">
+                    <datalist id="countries">
+                        <option value="India">
+                        <option value="USA">
+                    </datalist>
+
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="reset" value="Reset" disabled>
+                    <input type="submit" value="SEND">
+                </th>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>

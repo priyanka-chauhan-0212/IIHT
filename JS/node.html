@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">
+      <h1 id="h1">Heading</h1>
+    </div>
+
+    <script>
+      //   var div = document.getElementById("demo");
+      //   div.innerHTML = "<p>This is a paragraph</p>";
+
+      var div = document.getElementById("demo");
+      var h1 = document.getElementById("h1");
+
+      var para = document.createElement("p"); // para = '<p></p>'
+      var text = document.createTextNode("This is a paragraph"); // This is a paragraph
+
+      var para1 = document.createElement("p"); // para = '<p></p>'
+      var text1 = document.createTextNode("This is a paragraph1"); // This is a paragraph
+
+      var para2 = document.createElement("p"); // para = '<p></p>'
+      var text2 = document.createTextNode("This is a paragraph2"); // This is a paragraph
+
+      para.appendChild(text); // para = '<p>This is a paragraph</p>';
+      para1.appendChild(text1); // para = '<p>This is a paragraph</p>';
+      para2.appendChild(text2); // para = '<p>This is a paragraph</p>';
+
+      div.appendChild(para);
+      div.insertBefore(para1, h1);
+      div.replaceChild(para2, h1);
+    </script>
+  </body>
+</html>

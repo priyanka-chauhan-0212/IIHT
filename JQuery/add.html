@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam debitis
+        officia aut dolorum, possimus porro vel voluptas reiciendis hic minima
+        veritatis eius. Autem nobis facere atque quidem, dolores consequatur
+        eveniet.
+      </p>
+      <p id="p2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam debitis
+        officia aut dolorum, possimus porro vel voluptas reiciendis hic minima
+        veritatis eius. Autem nobis facere atque quidem, dolores consequatur
+        eveniet.
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        var div = $("#div1");
+        var p1 = $("#p1");
+        var p2 = $("#p2");
+        let heading = $("<h1></h1>").text("This is Heading");
+        let button = $("<button></button>").text("Click Me");
+        let button2 = $("<button></button>").text("Click Me");
+        // div.prepend(heading);
+        // div.append(button);
+        p1.before(heading);
+        p2.after(button);
+
+        p1.after(button2);
+
+        // div.remove();
+        div.empty();
+      });
+    </script>
+  </body>
+</html>

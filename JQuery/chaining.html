@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti
+      necessitatibus aliquam a, qui aut? Nesciunt voluptatem, molestiae nisi
+      quod totam nulla earum eius, quae voluptas illum optio sed labore. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti quod
+      totam nulla earum eius, quae voluptas illum optio sed labore. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Expedita corrupti
+      necessitatibus aliquam a, qui aut? Nesciunt voluptatem, molestiae nisi
+      quod totam nulla earum eius, quae voluptas illum optio sed labore.
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#p1")
+          .fadeOut(3000, function () {
+            // $("#p1").show();
+          })
+          .fadeIn(3000)
+          .slideUp(3000)
+          .slideDown(3000);
+      });
+    </script>
+  </body>
+</html>

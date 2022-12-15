@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm">
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="firstName"
+      /><br />
+      <input
+        type="text"
+        id="country"
+        name="country"
+        placeholder="country"
+      /><br />
+      <input type="text" id="phone" name="phone" placeholder="phone" /><br />
+      <input type="submit" value="Save" />
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        var userList = [];
+        var findUserId = 14;
+
+        //Get All
+        // $.ajax({
+        //   url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser",
+        //   method: "GET",
+        // }).then(function (data) {
+        //   userList = data;
+        //   console.log(userList);
+        // });
+
+        // Get One
+        $.ajax({
+          url:
+            "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" + findUserId,
+          method: "GET",
+        }).then(function (data) {
+          userList = data;
+          console.log(userList);
+
+          $("#firstName").val(userList.firstName);
+          $("#country").val(userList.country);
+          $("#phone").val(userList.phone);
+        });
+
+        function User(firstName, country, phone) {
+          this.firstName = firstName;
+          this.country = country;
+          this.phone = phone;
+        }
+
+        // $("#frm").submit(function () {
+        //   event.preventDefault();
+        //   let firstName = $("#firstName").val();
+        //   let country = $("#country").val();
+        //   let phone = $("#phone").val();
+
+        //   let user = new User(firstName, country, phone);
+        //   //POST -> insert user
+        //   $.ajax({
+        //     url: "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser",
+        //     method: "POST",
+        //     data: user,
+        //   }).then(function (data) {
+        //     console.log(data);
+        //   });
+
+        //   $("#firstName").val("");
+        //   $("#country").val("");
+        //   $("#phone").val("");
+        // });
+
+        // $("#frm").submit(function () {
+        //   event.preventDefault();
+        //   let firstName = $("#firstName").val();
+        //   let country = $("#country").val();
+        //   let phone = $("#phone").val();
+
+        //   let user = new User(firstName, country, phone);
+        //   //PUT -> insert user
+        //   $.ajax({
+        //     url:
+        //       "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" +
+        //       findUserId,
+        //     method: "PUT",
+        //     data: user,
+        //   }).then(function (data) {
+        //     console.log(data);
+        //   });
+
+        //   $("#firstName").val("");
+        //   $("#country").val("");
+        //   $("#phone").val("");
+        // });
+
+        $.ajax({
+          url:
+            "https://62e1182cfa99731d75cdd699.mockapi.io/tblUser/" + findUserId,
+          method: "DELETE",
+        }).then(function (data) {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
+</html>

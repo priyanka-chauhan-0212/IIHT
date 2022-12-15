@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm">
+      <label for="">Name</label>
+      <input type="text" name="Name" id="Name" />
+      <br />
+      <label for="">Email</label>
+      <input type="email" name="Email" id="Email" />
+      <br />
+      <label for="">Age</label>
+      <input type="number" name="Age" id="Age" />
+      <br />
+      <input type="submit" />
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+      var counter = 100;
+      var frm = document.getElementById("frm");
+      var tbody = document.getElementById("tbody");
+      var personList = [];
+
+      if (localStorage.getItem("persons") == null) {
+        personList = [];
+        localStorage.setItem("persons", "");
+      } else {
+        personList = localStorage.getItem("persons");
+      }
+
+      function Person(name, age, email) {
+        this.id = ++counter;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+      }
+
+      function writeData() {
+        event.preventDefault();
+        let Name = document.getElementById("Name");
+        let Email = document.getElementById("Email");
+        let Age = document.getElementById("Age");
+        let p = new Person(Name.value, Age.value, Email.value);
+        personList.push(p);
+        localStorage.setItem("persons", personList);
+        let htmlText = "";
+
+        htmlText += "<tr>";
+        htmlText += "<td>" + p.id + "</td>";
+        htmlText += "<td>" + p.name + "</td>";
+        htmlText += "<td>" + p.email + "</td>";
+        htmlText += "<td>" + p.age + "</td>";
+        htmlText += "</tr>";
+
+        tbody.innerHTML += htmlText;
+
+        Name.value = "";
+        Email.value = "";
+        Age.value = "";
+        console.log(personList);
+      }
+
+      frm.onsubmit = writeData;
+    </script>
+  </body>
+</html>

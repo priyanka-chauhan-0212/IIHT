@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+.text-red {
+    /* color: tomato; */
+    /* color: #b6003d; */
+    /* color: hsl(354, 99%, 61%); */
+    color: rgb(252, 17, 84);
+}
+
+.text-blue {
+    color: blue;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-lower {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-indent {
+    text-indent: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.shadow {
+    text-shadow: 4px 2px 2px blue;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.word-space {
+    word-spacing: 10px;
+}
+
+.letter-space {
+    letter-spacing: 5px;
+}
+
+.font-segoe {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-bold {
+    font-weight: 900;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.font-large {
+    font-size: 24px;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+.line-height {
+    line-height: 1;
+    /* default font size * 2 */
+}
+
+.list-square {
+    list-style-type: square;
+}
+
+.list-numeric {
+    list-style-type: decimal;
+}
+
+.list-none {
+    list-style-type: none;
+}
+
+.list-img {
+    list-style-image: url('/assets/img/photo-1.avif');
+}
+
+.list-position-inside {
+    list-style-position: inside;
+}
+
+a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: brown;
+}
+
+.border {
+    /* border: 1px solid blue; */
+    border-width: 2px;
+    border-style: solid;
+    border-color: blueviolet;
+}
+
+.border-left {
+    /* border-left-width: 2px;
+    border-left-style: dashed;
+    border-left-color: brown; */
+    border-left: 2px dashed magenta;
+}
+
+.border-thick {
+    border-width: 5px;
+}
+
+.border-blue {
+    border-color: dodgerblue;
+}
+
+.rounded-1 {
+    border-radius: 10px 0px 10px 50px;
+}
+
+.rounded-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.p-1 {
+    padding: 10px;
+    /* padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    padding-right: 25px; */
+    /* padding: 10px 25px 20px 15px; top right bottom left */
+    /* padding: 10px 15px 20px; top right-left bottom */
+    /* padding: 10px 20px; top-bottom right-left*/
+}
+
+.pl-1 {
+    padding-left: 10px;
+}
+
+.p-2 {
+    padding: 20px;
+}
+
+.m-1 {
+    /* margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-right: 25px; */
+    /* margin: 10px 15px 20px 25px; */
+    /* margin: 10px 15px 20px; */
+    margin: 10px 20px;
+}
+
+.w-25 {
+    width: 24%;
+}
+
+.w-33 {
+    width: 33%;
+}
+
+.w-50 {
+    width: 49%;
+}
+
+.w-75 {
+    width: 74%;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.position-fixed{
+    position: fixed;
+}
+.position-relative{
+    position: relative;
+}
+.position-absolute{
+    position: absolute;
+}
+
+.position-sticky{
+    position: sticky;
+}

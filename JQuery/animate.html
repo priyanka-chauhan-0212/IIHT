@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Btn 1</button>
+    <button>Btn 2</button>
+
+    <div></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // $("button").click(function () {
+        //   $("div").animate(
+        //     {
+        //       left: "250px",
+        //       opacity: "0.5",
+        //       height: "150px",
+        //       width: "150px",
+        //     },
+        //     2000
+        //   );
+        // });
+
+        $("button").click(function () {
+          setInterval(() => {
+            // $("div").animate({ height: "150px" }, 1000);
+            // $("div").animate({ width: "150px" }, 1000);
+            // $("div").animate({ height: "100px" }, 1000);
+            // $("div").animate({ width: "100px" }, 1000);
+
+            $("div").animate({ left: "+=20px" }, 1000);
+            $("div").animate({ height: "+=15px" }, 1000);
+            $("div").animate({ width: "+=15px" }, 500);
+          }, 4000);
+          // $("div").animate({ left: "250px" }, 1000);
+          //   $("div").animate({ height: "150px" }, 1000);
+          //   $("div").animate({ width: "150px" }, 500);
+          //   $("div").animate({ opacity: "0.2" }, 500);
+          //   $("div").animate({ backgroundColor: "red" }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>

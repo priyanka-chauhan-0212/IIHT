@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Arithmetic    +   -   *   /   %   ++  --  **
+        //Assignment    =   +=  -=  *=  /=
+        //Relational/Comparison     >   <   >=  <=  ==  !=  ===     !==
+        //Logical       &&  ||  !
+        //Conditional/Ternary       (condition) ? true : false
+
+        var a = 5
+
+        document.writeln('Value of a is ' + a + '<br>')
+        document.writeln('Value of a+1 is ' + (a+1) + '<br>')
+        document.writeln('Value of a-1 is ' + (a-1) + '<br>')
+        document.writeln('Value of a*2 is ' + (a*2) + '<br>')
+        document.writeln('Value of a/3 is ' + (a/3) + '<br>')
+        document.writeln('Value of a%3 is ' + (a%3) + '<br>')
+        document.writeln('Value of a**3 is ' + (a**3) + '<br>')
+        document.writeln('-----------------------------<br>')
+        a += 2 // a = a + 2
+        document.writeln('Value of a+=2 is ' + a + '<br>')
+        a *= 2
+        document.writeln('Value of a*=2 is ' + a + '<br>')
+        a /= 3
+        document.writeln('Value of a/=3 is ' + a + '<br>')
+
+        if(a > 0){
+            document.writeln('A is Positive <br>')
+        }
+        else if(a < 0){
+            document.writeln('A is Negative <br>')
+        }
+        else{
+            document.writeln('A is Zero <br>')
+        }
+
+        // console.log("Value of a is " + a)
+    </script>
+</body>
+</html>

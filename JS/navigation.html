@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #section1 > div > div {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="section1">
+      <!-- this is comment -->
+      <button id="close">Close</button>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel</p>
+        <div>
+          <h1>Heading1</h1>
+        </div>
+      </div>
+    </section>
+    <script>
+      //   var nodeElements = document.getElementById("section1").childNodes;
+      // console.log(
+      //   document.getElementById("section1").childNodes[3].childNodes[5]
+      //     .childNodes[1].firstChild.nodeValue
+      // );
+      var closeBtn = document.getElementById("close");
+      closeBtn.addEventListener("click", function () {
+        this.parentNode.parentNode.remove();
+      });
+    </script>
+  </body>
+</html>

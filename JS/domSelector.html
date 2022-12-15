@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem
+        ea quos dolor hic quaerat at, unde architecto ipsum, aperiam voluptatum
+        blanditiis harum fugit beatae in ipsam, ex quis fugiat.
+      </p>
+      <img src="" alt="" class="adsImg" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error libero
+        culpa molestiae perspiciatis quibusdam! Labore ab itaque animi expedita,
+        reprehenderit et nesciunt omnis illum esse consequuntur, blanditiis,
+        sapiente praesentium magni.
+      </p>
+    </section>
+    <div>
+      <img src="" alt="" class="adsImg" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        necessitatibus ex ea quaerat provident laudantium incidunt possimus,
+        voluptates odio saepe nihil deleniti quos illum. Quae cum quos dolor
+        distinctio magnam.
+      </p>
+      <div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          commodi animi architecto enim perferendis eligendi corporis dolorum
+          consequatur saepe autem minima tenetur maiores doloribus facilis
+          excepturi, optio, est reiciendis sequi? element
+        </p>
+      </div>
+    </div>
+    <img src="" alt="" class="adsImg" />
+    <script>
+      //   var paras = document.getElementsByTagName("p");
+      //   console.log(paras);
+      //   // paras[0].innerText = "<b>Hello</b>";
+      //   //   paras[0].id = "p1";
+      //   for (let i = 0; i < paras.length; i++) {
+      //     paras[i].style.color = "#ffffff";
+      //     paras[i].style.backgroundColor = "#000000";
+      //   }
+
+      var Images = [];
+      Images.push("https://www.w3schools.com/images/w3lynx_200.png");
+      Images.push("https://www.w3schools.com/images/htmlvideoad_footer.png");
+      Images.push("https://www.w3schools.com/howto/img_nature_wide.jpg");
+
+      var elements = document.getElementsByClassName("adsImg");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].alt = "Error Loading Image";
+        elements[i].src = "https://www.w3schools.com/images/w3lynx_200.png";
+      }
+
+      setInterval(() => {
+        var elements = document.getElementsByClassName("adsImg");
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].src = Images[Math.floor(Math.random() * Images.length)];
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>

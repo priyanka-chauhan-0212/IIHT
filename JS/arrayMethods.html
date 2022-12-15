@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.push("Grapes");
+      // console.log(fruits)
+      // document.write(fruits)
+
+      // console.log(fruits.toString())
+      // document.write(fruits.toString())
+
+      document.write(fruits.join(" "));
+      let x = fruits.pop();
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      fruits.unshift("Kiwi");
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      fruits.shift();
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+
+      //   const myChildren = myGirls.concat(myBoys);
+      const myChildren = myGirls + myBoys;
+      document.write("<br>");
+      document.write(myChildren);
+
+      //   fruits.splice(2, 0, "Lemon", "Kiwi");
+      //   document.write("<br>");
+      //   document.write(fruits.join(" "));
+
+      //   fruits.splice(2, 1, "Lemon", "Kiwi");
+      //   document.write("<br>");
+      //   document.write(fruits.join(" "));
+
+      fruits.splice(2, 1);
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+      const citrus = fruits.slice(1,4);
+      document.write("<br>");
+      document.write(citrus.join(" "));
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      fruits.sort()
+      document.write("<br>");
+      document.write(fruits.join(" "));
+
+      let num = [12,54,3,98,-4,512,117]
+      num.sort(function(a,b){
+        return b - a
+      })
+      document.write("<br>");
+      document.write(num.join(" "));
+    </script>
+  </body>
+</html>

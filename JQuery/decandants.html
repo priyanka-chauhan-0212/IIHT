@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="s1">
+      <div>
+        <p class="a">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quo,
+          impedit repellendus possimus animi sequi rerum assumenda hic saepe
+          dolorem distinctio voluptatibus aspernatur laborum incidunt quam quos
+          qui consequatur laudantium?
+        </p>
+      </div>
+      <div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            eligendi, voluptatibus delectus repellat adipisci, totam facere
+            similique consequatur ab doloremque aperiam fugit labore
+            exercitationem placeat distinctio nulla voluptate facilis aut.
+          </p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+          asperiores laudantium suscipit ea explicabo ipsam, delectus nemo quasi
+          aperiam, voluptatibus iusto quam. Similique assumenda iste vero,
+          laborum magnam error repudiandae.
+        </p>
+      </div>
+      <p class="a">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum velit
+        fugit odio quam totam dolor veritatis in, vel corrupti repellendus.
+        Velit praesentium quia excepturi est temporibus cupiditate neque placeat
+        repudiandae!
+      </p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // var childrens = $("#s1").children();
+        // console.log($(childrens[1]).children());
+        var decandants = $("#s1").find("*");
+        console.log(decandants);
+      });
+    </script>
+  </body>
+</html>
